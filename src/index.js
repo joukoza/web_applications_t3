@@ -3,6 +3,8 @@ var the_cell;
 var string;
 var cell_location;
 var timer = 0;
+var width = 0;
+var width_string;
 
 function table_cell(y, x) {
   cell_location = String("cell" + y + x);
@@ -183,14 +185,17 @@ function cell_click(id) {
 
 setInterval(function funky_timer() {
   timer++;
-  document.getElementById("progressi").innerHTML = timer;
-  document.getElementById("baari").style.width = "90%";
+  width = width + 10;
+  width_string = String(width) + "%";
+  document.getElementById("baari").style.width = width;
   if (timer === 10 && player === 1) {
     player = 2;
     timer = 0;
+    width = 0;
   } else if (timer === 10 && player === 2) {
     player = 1;
     timer = 0;
+    width = 0;
   }
 }, 1000);
 window.cell_click = cell_click;
