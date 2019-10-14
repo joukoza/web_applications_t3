@@ -16,14 +16,6 @@ table.board td {
   font-family: "Helvetica";
 }
 
-div.progress {
-  width: 300px;
-  margin: auto;
-  border: 20px double #999999;
-  color: #000000;
-  text-align: center;
-}
-
 div.bar {
   width: 100%;
   height: 10px;
